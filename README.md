@@ -44,21 +44,21 @@ Todo:
        + js/
          + (all default wt js goes here, including the editor source)
      + etc/
-       + wt-config.xml
+        + wt-config.xml
      + resources/
-       + (Any other files that the app needs to run, but aren't served go here)
+        + (Any other files that the app needs to run, but aren't served go here)
      + tools/
-       + (Source code for development tools like for reseting the DB, etc.)
+        + (Source code for development tools like for reseting the DB, etc.)
      + compass/
-       + (Scripts for generating compass CSS, This should be optional as it
-       + adds a lot of dependencies, but makes CSS generation really powerful)
+        + (Scripts for generating compass CSS, This should be optional as it
+        + adds a lot of dependencies, but makes CSS generation really powerful)
      + cmake/
-       + Here we add custom cmake scripts, for example:
-       + minify.cmake # detects minify tools for CSS and JS and runs them on
-                      # the appropriate dirs for release builds
-       + webify-images.cmake # detects gimp files, and badly encoded images in
-                             # the images dir and generates jpegs
-                             # in the build dir
+        + Here we add custom cmake scripts, for example:
+        + minify.cmake # detects minify tools for CSS and JS and runs them on
+                       # the appropriate dirs for release builds
+        + webify-images.cmake # detects gimp files, and badly encoded images in
+                              # the images dir and generates jpegs
+                              # in the build dir
  
  + Decide on and add features:
    + Definite Features:
