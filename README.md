@@ -15,6 +15,14 @@ Todo:
          - others later by people who care
    + Stick with c++98 - Should run on anyone's computer
    + Support both through compiler pre-processing - more work
+ + Decide on first version layout style:
+   + Use CSS for layout - Would need to generate a big CSS coding guide
+                        - would be friendlier to web devs
+                        - I would use compass for generation of the CSS
+                        - We'll probably need some level of CSS standardization anyway
+   + Use Wt WLayout     - Would probably be faster to code
+                        - Could still have layout kind of separate, in a different func
+                        - 
  + Decide on a project template layout. I like it something like this:
    + myproject/
      + src/
@@ -38,7 +46,19 @@ Todo:
      + etc/
        + wt-config.xml
      + resources/
-       + Any other files that the app needs to run, but aren't served go here
+       + (Any other files that the app needs to run, but aren't served go here)
+     + tools/
+       + (Source code for development tools like for reseting the DB, etc.)
+     + compass/
+       + (Scripts for generating compass CSS, This should be optional as it
+       + adds a lot of dependencies, but makes CSS generation really powerful)
+     + cmake/
+       + Here we add custom cmake scripts, for example:
+       + minify.cmake # detects minify tools for CSS and JS and runs them on
+                      # the appropriate dirs for release builds
+       + webify-images.cmake # detects gimp files, and badly encoded images in
+                             # the images dir and generates jpegs
+                             # in the build dir
  
  + Decide on and add features:
    + Definite Features:
@@ -67,3 +87,7 @@ Todo:
      + nginx        - Generates an nginx config file to proxy to your app
                     - and to serve the static files straight out
      + ha-proxy     - Generates an ha-proxy config file for your app
+     + css          - A front end to generation of CSS through compass (optional)
+
+ + Other ideas that should probably be in a library:
+   + Image thumbnailing - tools to store images in different sizes
